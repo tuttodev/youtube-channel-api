@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node dist/infrastructure/apps/rest-api/index.js"
+    "tsc": "tsc",
+    "postinstall": "npm run tsc",
+    "start": "node dist/infrastructure/apps/rest-api/index.js"
   },
   "keywords": [],
   "author": "",
