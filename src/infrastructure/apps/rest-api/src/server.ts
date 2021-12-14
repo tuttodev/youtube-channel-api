@@ -5,11 +5,11 @@ import { registerRoutes } from './routes';
 import Router from 'express-promise-router';
 
 export class Server {
-  private _port: number
+  private _port: number | string
   private _express: express.Express
   private _httpServer?: http.Server
 
-  constructor(port: number) {
+  constructor(port: number | string) {
     this._port = port
     this._express = express()
     const router = Router()

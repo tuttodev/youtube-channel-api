@@ -1,7 +1,8 @@
 import { Server } from './src/server'
 
 try {
-  new Server(2426).start()
+  const port = process.env.PORT || 2426
+  new Server(port).start()
 } catch (e) {
   console.log(e);
   process.exit(1);
