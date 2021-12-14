@@ -13,7 +13,7 @@ export class YoutubeChannelRepository extends ChannelRepository {
   }
 
   async getVideos(): Promise<Video[]> {
-    const browser = await chromium.launch()
+    const browser = await chromium.launch({ args: ["--no-sandbox"] })
     const page = await browser.newPage({
       viewport: {
         width: 1920,
